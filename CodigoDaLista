@@ -1,0 +1,42 @@
+tarefas = ["Estudar python" , "Ir para faculdade" , "Ler livro"]
+
+def adicionar_tarefas(lista):
+    adicionar = input("Qual tarefa deseja adicionar? ")
+    lista.append(adicionar)
+    return lista 
+
+def mostrar_tarefas(cam):
+    posicao = 0
+    while posicao < len(cam):
+        print(f"Posição{posicao + 1} . {cam[posicao]}")
+        posicao = posicao + 1
+    return cam
+
+
+def remover_tarefa(lista2):
+    posicao = 0
+    while posicao < len(lista2):
+        print(f"Posição{posicao + 1} . {lista2[posicao]}")
+        posicao = posicao + 1
+    remover = int(input("Qual tarefa deseja remover? "))
+    lista2.pop(remover - 1)
+    return lista2
+
+
+while True:
+    print(tarefas)
+    print("1 - Adicionar tarefa, 2 - Ver tarefas, 3 - Remover tarefa, 4 - Sair")
+    pagina = int(input("Onde deseja ir?" ))
+    if pagina == 1:
+        x = adicionar_tarefas(tarefas)
+        print(x)
+    elif pagina == 2:
+        z = mostrar_tarefas(tarefas)
+        print(z)     
+    elif pagina == 3:
+        y = remover_tarefa(tarefas)
+        print(y)
+    elif pagina == 4:
+        break
+    else:
+        print("Opção Invalida")
